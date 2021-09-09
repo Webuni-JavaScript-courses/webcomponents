@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>&lt;webuni-card> Demo</title>
     <script type="module" src="../webuni-card.js"></script>
-    <script type="module" src="../webuni-button.js"></script>
-    <script type="module" src="../webuni-info-box.js"></script>
+    <script type="module" src="../webuni-list.js"></script>
+    <script type="module" src="../webuni-list2.js"></script>
     <style>
     h1 {
       text-decoration: underline;
@@ -18,12 +18,9 @@
       width: 33%;
       margin: 10px;
     }
-    webuni-info-box {
-      margin: 20px;
-    }
-    webuni-button {
-      margin: 20px;
-    }
+    webuni-list, webuni-list2 {
+      margin: 10px auto;
+    } 
     </style>
   </head>
   <body>
@@ -48,8 +45,11 @@
         <h1>Ez egy kívülről injektált tartalom</h1>
       </webuni-card>
     </div>
-    <webuni-info-box>
-      <p>This is an informational text</p>
-    </webuni-info-box>
+    <webuni-list title="Dobogó" item1="Verstappen" item2="Hamilton" item3="Bottas"></webuni-list>
+    <webuni-list2 title="Dobogó">
+      <div slot="item1" style="color: blue">Verstappen</div>
+      <div slot="item2" style="color: turquoise">Hamilton</div>
+      <div slot="item3" style="color: turquoise">Bottas</div>
+    </webuni-list>
   </body>
 </html>

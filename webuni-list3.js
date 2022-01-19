@@ -66,12 +66,13 @@
    static get properties() {
     return {
       title: {type: String},
-      count: {type: Number}
+      count: {type: Number} // Bemeneti paraméter, amely megmondja, hogy hány elemet várunk
     };
   }
  
   render() {
-     const items = new Array(this.count).fill(null).map((_, index) => `item${index+1}`);
+     const items = new Array(this.count).fill(null).map((_, index) => `item${index+1}`); // Csinálunk egy tömböt, amiben a slotok nevei vannak
+     // Majd lentebb a tömb elemeiből lista elem HTML-eket képzünk
      return html`
        <link rel="preconnect" href="https://fonts.gstatic.com">
        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">

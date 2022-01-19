@@ -7,6 +7,7 @@
     <script type="module" src="../webuni-card.js"></script>
     <script type="module" src="../webuni-list.js"></script>
     <script type="module" src="../webuni-list2.js"></script>
+    <script type="module" src="../webuni-list3.js"></script>
     <style>
     h1 {
       text-decoration: underline;
@@ -18,7 +19,7 @@
       width: 33%;
       margin: 10px;
     }
-    webuni-list, webuni-list2 {
+    webuni-list, webuni-list2, webuni-list3 {
       margin: 10px auto;
     } 
     </style>
@@ -50,6 +51,13 @@
       <div slot="item1" style="color: blue">Verstappen</div>
       <div slot="item2" style="color: turquoise">Hamilton</div>
       <div slot="item3" style="color: turquoise">Bottas</div>
-    </webuni-list>
+    </webuni-list2>
+    <webuni-list3 title="Pilóták" count="5">
+      <div slot="item1" style="color: blue">Verstappen</div>
+      <div slot="item2" style="color: turquoise">Hamilton</div>
+      <div slot="item3" style="color: turquoise">Bottas</div>
+      <div slot="item4" style="color: orange">Norris</div>
+      <div slot="item5" style="color: orange">Ricciardo</div>
+    </webuni-list3>
   </body>
 </html>

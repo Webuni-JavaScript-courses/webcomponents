@@ -20,7 +20,7 @@
   * @slot - This element has a slot
   * @csspart button - The button
   */
- export class WebuniList2 extends LitElement {
+ export class WebuniList3 extends LitElement {
    static get styles() {
      return css`
        :host {
@@ -65,31 +65,28 @@
 
    static get properties() {
     return {
-      title: {type: String}
+      title: {type: String},
+      count: {type: Number}
     };
   }
  
   render() {
+     const items = new Array(this.count).fill(null).map((_, index) => `item${index+1}`);
      return html`
        <link rel="preconnect" href="https://fonts.gstatic.com">
        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
        <div class="container">
             <div class="title bottom-border">${this.title}</div>
             <ul>
-                <li class="item bottom-border">
-                    <slot name="item1"></slot>
-                </li>
-                <li class="item bottom-border">
-                    <slot name="item2"></slot>
-                </li>
-                <li class="item">
-                    <slot name="item3"></slot>
-                </li>
+                ${items.map((item, index) => html`
+                <li class="item ${index === items.length - 1 ? '' : 'bottom-border'}">
+                    <slot name="${item}"></slot>
+                </li>`)}
             </ul>
        </div>
      `;
    }
 }
  
- window.customElements.define('webuni-list2', WebuniList2);
+ window.customElements.define('webuni-list3', WebuniList3);
  

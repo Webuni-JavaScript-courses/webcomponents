@@ -50,9 +50,11 @@
             border-bottom-width: 1px;
             border-bottom-style: solid;
         }
-
         li {
             list-style: none;
+        }
+        ul {
+          padding: 0;
         }
      `;
    }
